@@ -6,7 +6,7 @@ const api = {
 function getPlugin() {
 	return import("./plugin").then(({ default: entry }) => {
 		entry(api)
-	}).catch(speak)
+	}).catch(api.speak)
 }
 
 getPlugin();
